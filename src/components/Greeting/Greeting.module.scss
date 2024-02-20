@@ -1,0 +1,108 @@
+.greet{
+	padding: 20px 60px;
+	display: flex;
+	justify-content: space-between;
+}
+
+
+.label{
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 24px;
+	letter-spacing: 0%;
+}
+.greetContent{
+	padding-top: 30px;
+}
+.titleSection{
+	width: 840px;
+	margin-top: 8px;
+	margin-bottom: 24px;
+}
+
+.title{
+	font-size: 72px;
+	font-weight: 600;
+	line-height: 125%;
+	letter-spacing: 0%;
+}
+
+.titleColor {
+	font-size: 72px;
+	font-weight: 600;
+	line-height: 125%;
+	letter-spacing: 0%;
+	color: rgb(91, 136, 229);
+}
+
+.imageSection{
+	margin-top: -50px;
+	margin-left: -110px;
+}
+
+.greetHint {
+	font-size: 28px;
+	font-weight: 300;
+	line-height: 33px;
+	letter-spacing: 0%;
+	opacity: 0.7;
+}
+
+.buttonGroup {
+	margin-top: 56px;
+	display: flex;
+	flex-direction: row;
+}
+.buttonPrimary{
+	text-decoration: none;
+	border: none;
+	border-radius: 10px;
+	backdrop-filter: blur(7px);
+	background: linear-gradient(-46.40deg, rgb(45, 19, 172),rgb(130, 59, 182) 27.851%,rgb(185, 60, 166) 68.162%,rgb(230, 186, 91) 104.703%);
+	color: rgb(255, 255, 255);
+	width: 282px;
+	height: 70px;
+	// шрифт
+	font-size: 18px;
+	line-height: 21px;
+	letter-spacing: 0%;
+	margin-right: 8px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.buttonLabel{
+	width: 220px;
+	height: 70px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	//шрифт
+	
+	img {
+		margin-left: 8px;
+	}
+
+	cursor: pointer;
+
+	a.buttonLink {
+		text-decoration: none;
+		outline: none;
+		font-size: 20px;
+		font-weight: 400;
+		line-height: 24px;
+		letter-spacing: 0%;	
+		color: white
+	}
+}
+
+
+
+@media screen and (max-width: 1024px) {
+	.titleSection{
+		width: 480px;
+	}
+}

@@ -1,0 +1,64 @@
+.footer {
+	display: inline-block;
+	left: 0;
+	background: linear-gradient(180.00deg, rgb(64, 28, 174, 0.4),rgba(64, 28, 174, 0) 96.707%);
+	height: 334px;
+	width: 100vw;
+	position: absolute;
+}
+
+.container {
+	position: relative;
+	height: 100%;
+}
+
+
+.footerImage {
+	position: absolute;
+	bottom:0;
+	width: 100%;
+	z-index: 2;
+	object-fit: fill;
+	max-height: 278px;
+}
+
+.footerInfo {
+	display: grid;
+	grid-template-columns: 35% 20% 20% 20%; 
+	padding: 25px 60px;
+}
+
+.footerInfoLink{
+	cursor: pointer;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 19px;
+	letter-spacing: 0%;
+	margin: 8px 0 8px 0;
+	z-index: 3;
+}
+
+.footerInfoItem{ 
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	
+}
+
+.footerInfoTitle {
+	font-size: 24px;
+	font-weight: 600;
+	line-height: 29px;
+	letter-spacing: 0%;
+	margin: 8px 0 23px 0;
+}
+
+.socialWeb{
+	display: flex;
+	flex-direction: row;
+}
+
+.socialWebIcon{
+	cursor: pointer;
+	margin-right: 16px;
+}
