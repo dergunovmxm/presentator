@@ -48,14 +48,14 @@ const Login: FC = () => {
 										<Field 
 											name='login' 
 											placeholder='Логин' 
-											className={cn(styles.input, {[styles.inputError]: errors.login && touched.login})} 
+											className={cn(styles.loginInput, {[styles.inputError]: errors.login && touched.login})} 
 										/>
 										<label className={cn(styles.label, {[styles.labelError]: errors.password && touched.password})}>Пароль</label>
 										<Field 
 											name='password' 
 											type='password' 
 											placeholder='Пароль' 
-											className={cn(styles.input, {[styles.inputError]: errors.password && touched.password})}
+											className={cn(styles.loginInput, {[styles.inputError]: errors.password && touched.password})}
 										/>
 										<div className={styles.buttonContainer}>
 											<button type='submit'>Войти</button>

@@ -23,7 +23,7 @@ const Registration: FC = () => {
               password: "",
             }}
             onSubmit={(values, {resetForm}) => {
-              navigate('/login')
+              navigate('/confirmation')
               console.log("values", values);
               resetForm()
             }}
@@ -45,14 +45,14 @@ const Registration: FC = () => {
                   <Field
                     name="login"
                     placeholder="Логин"
-                    className={cn(styles.input, {[styles.inputError]: errors.login && touched.login})}
+                    className={cn(styles.registerInput, {[styles.inputError]: errors.login && touched.login})}
                   />
                   <label className={cn(styles.label, {[styles.labelError]: errors.password && touched.password})}>Пароль</label>
                   <Field
                     name="password"
                     type="password"
                     placeholder="Пароль"
-                    className={cn(styles.input, {[styles.inputError]: errors.password && touched.password})}
+                    className={cn(styles.registerInput, {[styles.inputError]: errors.password && touched.password})}
                   />
                   <div className={styles.buttonContainer}>
                     <button type="submit">Войти</button>

@@ -23,7 +23,7 @@ export const router = createBrowserRouter([
 		element: <Registration />
 	},
 	{
-		path: '/confirm',
+		path: '/confirmation',
 		element: <Confirm />
 	},
 	{
