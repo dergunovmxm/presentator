@@ -27,7 +27,9 @@
 	grid-template-columns: 35% 20% 20% 20%; 
 	padding: 25px 60px;
 }
-
+.footerInfoMobile {
+	display: none;
+}
 .footerInfoLink{
 	cursor: pointer;
 	font-size: 16px;
@@ -61,4 +63,53 @@
 .socialWebIcon{
 	cursor: pointer;
 	margin-right: 16px;
+}
+
+@media screen and (max-width: 1024px) {
+	.socialWebIcon {
+		width: 28px;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	.footer  {
+		height: 173px;
+		padding-bottom: 0;
+	}
+	.socialWebIcon {
+		width: 28px;
+	}
+	.footerLogo {
+		display: none;
+	}
+	.footerInfo {
+		display: none;
+	}
+	.footerInfoMobile {
+		display: grid; 
+		grid-template-rows: 1fr ;
+		grid-template-columns: 1fr 1fr;
+		
+		gap: 0px;
+		height: 60%;
+
+		padding: 11px 16px 0 16px;
+	}
+	.footerInfoTitle {
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 19px;
+		letter-spacing: 0%;
+		margin: 0 0 16px 0;
+	}
+	.footerInfoLink {
+		font-size: 11px;
+		font-weight: 300;
+		letter-spacing: 0%;
+		margin: 0;
+	}
+	.socialWebIcon {
+		width: 20px;
+		margin-right: 8px;
+	}
 }

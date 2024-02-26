@@ -58,3 +58,22 @@ button{
 	line-height: 21px;
 	letter-spacing: 0%;
 }
+
+@media screen and (max-width: 1280px) {
+	.imageSection{
+		img {
+			width: 480px;
+		}
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.title{
+	font-size: 48px;
+	}
+	.imageSection{
+		img {
+			width: 360px;
+		}
+	}
+}

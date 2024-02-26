@@ -73,7 +73,7 @@
 	cursor: pointer;
 }
 
-.buttonLabel{
+.greetingButtonLabel{
 	width: 220px;
 	height: 70px;
 	display: flex;
@@ -100,9 +100,98 @@
 }
 
 
+@media screen and (max-width: 1280px) {
+	.imageSection{
+		img {
+			width: 540px;
+		}
+	}
+	.titleSection{
+		width: 720px;
+		margin-top: 8px;
+		margin-bottom: 24px;
+	}
+	
+	.title{
+		font-size: 58px;
+	}
+
+	.titleColor{
+		font-size: 58px;
+	}
+	.greetHint {
+		font-size: 24px;
+	}
+	
+}
+
 
 @media screen and (max-width: 1024px) {
 	.titleSection{
 		width: 480px;
 	}
+	.imageSection{
+		img {
+			width: 420px;
+		}
+	}
+	.title{
+		font-size: 48px;
+	}
+
+	.titleColor{
+		font-size: 48px;
+	}
+	.greetHint {
+		font-size: 18px;
+	}
+	.buttonPrimary{
+		width: 220px;
+	}
 }
+
+@media screen and (max-width: 375px) {
+	.greet {
+		padding: 0;
+	}
+	.greetContent{
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+	}
+	.imageSection {
+		display: none;
+	}
+	.titleSection {
+		text-align: center;
+		width: 323px;
+	}
+	.title {
+		font-size: 24px;
+	}
+	.titleColor {
+		font-size: 24px;
+	}
+	.greetHint {
+		font-size: 12px;
+	}
+	.greetContent {
+		width: 343px;
+	}
+	.greetingButtonLabel {
+		display: none;
+		.buttonLink {
+			display: none;
+		}
+	}
+	.buttonPrimary{ 
+		width: 185px;
+		height: 44px;
+	}
+	.buttonPrimary {
+		font-size: 12px;
+	}
+}
+
+

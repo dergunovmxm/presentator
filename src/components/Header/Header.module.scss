@@ -36,8 +36,6 @@
 	align-items: center;
 }
 
-
-
 .buttonPrimary{
 	text-decoration: none;
 	border: none;
@@ -132,5 +130,14 @@
 	width: 30px;
 	height: 30px;
 	background-color: #151E2D;
+}
+
+@media screen and (max-width: 375px) {
+	.root {
+		padding: 11px 16px;
+	}
+	.menu {
+		display: none;
+	}
 }
 

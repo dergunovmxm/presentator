@@ -197,3 +197,19 @@ button{
 	letter-spacing: 0%;
 	margin-bottom: 4px
 }
+
+//adaptive
+
+@media screen and (max-width: 1024px) {
+	.logo{
+		font-size: 42px;
+	}
+	.form{
+		//size
+		width: 420px;
+		min-width: 420px;
+		height: 540px;
+		min-height: 540px;
+		border-radius: 20px
+	}
+}

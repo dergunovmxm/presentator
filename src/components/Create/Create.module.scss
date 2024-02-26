@@ -44,3 +44,29 @@
 	align-items: center;
 	cursor: pointer;
 }
+
+
+@media screen and (max-width: 1024px) {
+	.title {
+		font-size: 48px;
+		margin-bottom: 24px;
+	}
+	.buttonPrimary{ 
+		width: 240px;
+		height: 70px;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.container {
+		margin-bottom: 56px;
+	}
+	.title {
+		font-size: 24px;
+	}
+	.buttonPrimary{
+		font-size: 14px;
+		width: 200px;
+		height: 45px;
+	}
+}

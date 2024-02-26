@@ -30,12 +30,18 @@ const Presentation: FC = () => {
 					
 								<div className={styles.radioGroup}>
 									<div>
-										<input type="radio" id="ppx" name="format" value="ppx" checked  className={styles.presentationRadio}/>
+										<input type="radio" id="ppx" name="format" value="ppx" checked  className={styles.radio}/>
 										<label className={styles.radioLabel} htmlFor="ppx">.ppx</label>
 									</div>
 
 									<div>
-										<input type="radio" id="pdf" name="format" value="pdf" className={styles.presentationRadio} />
+										<input 
+										type="radio" 
+										id="pdf" 
+										name="format" 
+										value="pdf" 
+										className={styles.radio}
+										 />
 										<label className={styles.radioLabel} htmlFor="pdf">.pdf</label>
 									</div>
 								</div>

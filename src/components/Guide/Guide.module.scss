@@ -40,3 +40,47 @@
 	line-height: 120%;
 	letter-spacing: 0%;
 }
+
+@media screen and (max-width: 1024px) { 
+	.guideStatisticsLabel {
+		font-size: 18px;
+	}
+	.guideStatisticsValue{
+		font-size: 48px;
+	}
+
+}
+
+@media screen and (max-width: 375px) {
+	.container {
+		padding: 0 16px;
+	}
+	.title {
+		font-size: 16px;
+	}
+	.guideImage {
+		width: 343px;
+		margin: 16px 0 37px 0;
+	}
+	.guideStatistics {
+		display: grid; 
+
+		grid-template-rows: 50% 50%;
+		grid-template-columns: 50% 50%;
+		
+		gap: 16px;
+		height: 100%;
+		margin-bottom: 56px;
+	}
+	.guideStatisticsValue {
+		font-size: 24px;
+		margin-bottom: 8px;
+	}
+	.guideStatisticsLabel {
+		font-size: 14px;
+		font-weight: 300;
+	}
+	.guideStatisticsItem {
+		width: 150px;
+	}
+}

@@ -12,3 +12,21 @@
 		color: rgb(91, 136, 229)
 	}
 }
+
+@media screen and (max-width: 1280px) {
+	.logo {
+		font-size: 36px;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.logo {
+		font-size: 28px;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	.logo {
+		font-size: 18px;
+	}
+}

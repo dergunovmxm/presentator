@@ -93,7 +93,7 @@ const Confirm = () => {
 										</div>
 
 										<div className={styles.confirmCheckboxContainer}>
-												<input type='checkbox' checked={checked} onChange={() => setChekecd(!checked)} className={styles.confirmCheckbox}/>
+												<Field type='checkbox' checked={checked} onChange={() => setChekecd(!checked)} className={styles.confirmCheckbox}/>
 												<div className={styles.confirmCheckboxLabel}>
 													<span>Я прочитал(а) <Link to='/' className={styles.link}>пользовательское соглаение</Link></span>
 													<span> и принимаю его условия </span>

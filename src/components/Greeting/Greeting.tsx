@@ -32,7 +32,7 @@ const Greeting: FC = () => {
 						)
 					}
 					
-					<div className={styles.buttonLabel}>
+					<div className={styles.greetingButtonLabel}>
 						<a className={styles.buttonLink} href="#more">Узнать больше</a>
 						<img src='../images/arrow_down.svg' alt='paint' />
 					</div>

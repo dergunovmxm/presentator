@@ -1,11 +1,12 @@
 import { FC } from "react";
 import './Info.scss'
 import cn from 'classnames'
-import {infoContent} from "./utils";
+import {infoContent, mobileImages} from "./utils";
 
 const Info: FC = () => {
 	return (
-		<section className= 'infoContainer'>
+		<>
+			<section className= 'infoContainer'>
 			<a id='more' />
 			{
 				infoContent.map((item) => {
@@ -23,6 +24,35 @@ const Info: FC = () => {
 			}
 			
 		</section>
+		{/* Разметка для мобильной версии */}
+		<section className= 'infoContainerMobile'>
+			{infoContent.map((item) => {
+				return (
+					<div className="descriptionBlock">
+						<div className='descriptionContainer'>
+							<div className='description'>
+								{item.description}
+							</div>
+						</div>
+						<img className={item.divider} src='../images/divider.svg'/>
+					</div>						
+				
+				)
+			})}
+			<div className="imagesBlock">
+				{
+					mobileImages.map((item) => {
+						return (
+							
+							<img className='image' src={item.image} />
+						)
+					})
+				}
+			</div>
+
+		</section>
+		</>
+
 	)
 }
 
