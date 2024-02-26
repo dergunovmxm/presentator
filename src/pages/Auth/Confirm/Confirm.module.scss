@@ -83,7 +83,6 @@
 	font-weight: 400;
 	line-height: 125%;
 	letter-spacing: 0%;
-	margin-right: 8px;
 	text-align: center;
 }
 
@@ -216,4 +215,47 @@
 	.subtitle{
 		font-size: 16px;
 	}
+}
+
+@media screen and (max-width: 1024px) {
+	.logo{
+		display: none;
+	}
+	.form{
+		//size
+		width: 343px;
+		min-width: 343px;
+		height: 391px;
+		min-height: 391px;
+		border-radius: 20px;
+
+		padding: 34px;
+		box-sizing: border-box;
+	}
+
+	.formContainer {
+		margin: 0;
+	}
+
+	.title {
+		font-size: 27px;
+		margin-bottom: 8px;
+	}
+
+	.subtitle {
+		font-size: 12px;
+		margin-bottom: 24px;
+	}
+
+	.label {
+		font-size: 12px;
+	}
+
+	.button {
+		width: 145px;
+		height: 44px;
+
+		font-size: 16px;
+	}
+
 }

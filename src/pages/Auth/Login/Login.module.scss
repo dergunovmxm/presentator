@@ -207,16 +207,69 @@ button{
 
 //adaptive
 
+
+
 @media screen and (max-width: 1024px) {
 	.logo{
 		font-size: 42px;
 	}
+}
+
+@media screen and (max-width: 375px) {
+	.logo{
+		display: none;
+	}
 	.form{
 		//size
-		width: 420px;
-		min-width: 420px;
-		height: 540px;
-		min-height: 540px;
-		border-radius: 20px
+		width: 343px;
+		min-width: 343px;
+		height: 366px;
+		min-height: 366px;
+		border-radius: 20px;
+
+	}
+	.formContainer {
+		padding: 30px;
+		margin: 0;
+	
+	}
+
+	.title {
+		font-size: 27px;
+		margin-bottom: 8px;
+	}
+	.subtitle {
+		margin-bottom: 8px;
+	}
+	.subtitleLabel {
+		font-size: 14px;
+	}
+	.subtitleLink {
+		font-size: 14px;
+	}
+
+	.label {
+		font-size: 12px;
+	}
+
+	.loginInput {
+		width: 260px;
+		height: 36px;
+		padding: 0 10px;
+		margin-bottom: 16px;
+	}
+
+	.buttonContainer {
+		button {
+			width: 124px;
+			height: 44px;
+			font-size: 16px;
+		}
+	}
+	.forgot {
+		font-size: 12px;
+	}
+	.restore {
+		font-size: 12px;
 	}
 }

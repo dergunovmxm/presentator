@@ -33,6 +33,7 @@
 
 
 .logo{
+
 	font-family: 'Benzin';
 	font-size: 56px;
 	font-weight: 400;
@@ -210,6 +211,53 @@ button{
 		min-width: 420px;
 		height: 540px;
 		min-height: 540px;
+		border-radius: 20px;
+		padding: 40px;
+		box-sizing: border-box;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	.logo{
+		display: none;
+	}
+	.form{
+		//size
+		width: 343px;
+		min-width: 343px;
+		height: 366px;
+		min-height: 366px;
 		border-radius: 20px
+	}
+	.formContainer {
+		margin: 0;
+	}
+	.title {
+		font-size: 27px;
+		margin-bottom: 8px;
+	}
+	.subtitle {
+		margin-bottom: 8px;
+	}
+	.subtitleLabel {
+		font-size: 14px;
+	}
+	.subtitleLink {
+		font-size: 14px;
+	}
+	.label {
+		font-size: 12px;
+	}
+	.registerInput {
+		width: 260px;
+		margin-bottom: 16px;
+	}
+	.buttonContainer {
+		button {
+			width: 142px;
+			height: 44px;
+			margin: 16px 0 ;
+			font-size: 16px;
+		}
 	}
 }

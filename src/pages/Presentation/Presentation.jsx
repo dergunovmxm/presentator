@@ -2,7 +2,7 @@ import {FC} from "react";
 import styles from "./Presentation.module.scss";
 import Header from "../../components/Header";
 
-const Presentation: FC = () => {
+const Presentation = () => {
 	let role = window.localStorage.getItem('role')
 	return (
 		<main className={styles.container}>

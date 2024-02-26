@@ -135,9 +135,20 @@
 @media screen and (max-width: 375px) {
 	.root {
 		padding: 11px 16px;
+		display: flex;
+		justify-content: start;
 	}
-	.menu {
+	.menuGroup {
 		display: none;
+	}
+	.buttonGroup {
+		width: 40px;
+	}
+	.buttonDefaultBorder {
+		width: 120px;
+	}
+	.buttonDefault {
+		width: 120px;
 	}
 }
 
