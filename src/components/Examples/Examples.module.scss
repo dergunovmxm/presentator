@@ -32,7 +32,7 @@
 	}
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 430px) {
 	.container {
 		padding: 0 16px;
 	}
@@ -42,8 +42,8 @@
 	.images {
 		display: grid; 
 
-		grid-template-rows: 50% 50%;
-		grid-template-columns: 50% 50%;
+		grid-template-rows: 1fr 1fr;
+		grid-template-columns: 1fr 1fr;
 		
 		gap: 8px;
 		height: 100%;
@@ -56,5 +56,9 @@
 	}
 	.image:last-child {
 		display: initial;
+	}
+	.imagesContainer {
+		display: flex;
+		justify-content: center;
 	}
 }

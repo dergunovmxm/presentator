@@ -8,19 +8,23 @@ const Guide: FC = () => {
 			<div className={styles.title}>
 				<span>Это проще, чем кажется</span>
 			</div>
-			<img className={styles.guideImage} src="../images/guide.png" alt="guide"/>
-			<div className={styles.guideStatistics}>
-			 {
-				staisticContent.map((item: any) => {
-					return (
-						<div className={styles.guideStatisticsItem}>
-							<span className={styles.guideStatisticsValue}>{item.value}</span>
-							<span className={styles.guideStatisticsLabel}>{item.label}</span>
-						</div>
-					)
-				})
-			 }
+			
+			<div className={styles.content}>
+				<img className={styles.guideImage} src="../images/guide.png" alt="guide"/>
+					<div className={styles.guideStatistics}>
+					{
+						staisticContent.map((item: any) => {
+							return (
+								<div className={styles.guideStatisticsItem}>
+									<span className={styles.guideStatisticsValue}>{item.value}</span>
+									<span className={styles.guideStatisticsLabel}>{item.label}</span>
+								</div>
+							)
+						})
+					}
+				</div>
 			</div>
+			
 		</section>
 	)
 }

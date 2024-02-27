@@ -5,15 +5,18 @@ const Examples: FC = () => {
 	return (
 		<section className={styles.container}>
 			<span className={styles.title}>Примеры работ</span>
-			<div className={styles.images}>
-				{
-					exampleImages.map((image) => {
-						return (
-							<img className={styles.image} src={image.url} alt='example' />
-						)
-					})
-				}
+			<div className={styles.imagesContainer}>
+				<div className={styles.images}>
+					{
+						exampleImages.map((image) => {
+							return (
+								<img className={styles.image} src={image.url} alt='example' />
+							)
+						})
+					}
+				</div>
 			</div>
+			
 		</section>
 	)
 }

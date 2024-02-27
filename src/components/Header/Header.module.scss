@@ -132,7 +132,7 @@
 	background-color: #151E2D;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 430px) {
 	.root {
 		padding: 11px 16px;
 		display: flex;
@@ -149,6 +149,9 @@
 	}
 	.buttonDefault {
 		width: 120px;
+	}
+	.buttonAccountContainer {
+		width: 140px;
 	}
 }
 

@@ -17,6 +17,11 @@ const Greeting: FC = () => {
 					<span className={styles.titleColor}> вместе с ПрезентаторAi</span>
 				</div>
 
+				<div className={styles.titleSectionMobile}>
+					<span className={styles.title}>Создавайте идеальные презентации</span>
+					<span className={styles.titleColor}> с помощью Ai</span>
+				</div>
+
 				<span className={styles.greetHint}>Нужно только зарегистрироваться...</span>
 
 				<div className={styles.buttonGroup}>
