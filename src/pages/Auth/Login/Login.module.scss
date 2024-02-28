@@ -216,9 +216,7 @@ button{
 }
 
 @media screen and (max-width: 430px) {
-	.logo{
-		display: none;
-	}
+
 	.form{
 		//size
 		width: 343px;
@@ -227,6 +225,11 @@ button{
 		min-height: 366px;
 		border-radius: 20px;
 
+	}
+	.content {
+		display: flex;
+		align-items: start;
+		height: 580px;
 	}
 	.formContainer {
 		padding: 30px;

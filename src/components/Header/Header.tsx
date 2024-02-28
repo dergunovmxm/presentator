@@ -1,15 +1,16 @@
-import React, {FC} from "react";
+import React, {FC, useState} from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./Header.module.scss"
 import Logo from "../Logo";
 import content from "./Header.content.json";
+import MobileModal from "../MobileModal";
 interface HeaderProps {
 	role?: string | null;
 	isAuth?: boolean;
 	generation?: boolean;
 }
 const Header: FC<HeaderProps> = ({generation, role}: HeaderProps) => {
-	const isAuth = false
+	const [isModalVisible, setIsModalVisible] = useState<boolean>(false);
 	const navigate = useNavigate();
 	
 	return (
@@ -67,6 +68,39 @@ const Header: FC<HeaderProps> = ({generation, role}: HeaderProps) => {
 				}
 		
 			</div>
+			
+
+			{!isModalVisible ? (
+		
+				<div className={styles.mobileMenu} >
+					{
+						role === 'user'  ? (
+								<div className={styles.mobileButtonGroup}>
+								<div className={styles.mobileButtonAccountContainer}>
+									<div className={styles.mobileButtonAccount} onClick={() => navigate("/user/account")}>
+
+										<div className={styles.mobileIconContainer}>
+
+											<div className={styles.mobileIcon}>
+												<img src="../images/user.svg" alt="user" />
+											</div>
+
+										</div>
+
+										<div className={styles.mobileButtonAccountText}>
+											<span>Кабинет</span>
+										</div>
+
+									</div>
+								</div>
+						
+							</div>
+						) : <></> 
+					}
+					<img src="../images/menu.svg" alt="menu" onClick={() => setIsModalVisible(true)}/>
+				</div>
+			) : null}
+			<MobileModal isModalVisible={isModalVisible} setIsModalVisible={setIsModalVisible}/>
 		</header>
 	)
 }

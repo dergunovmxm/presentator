@@ -1,6 +1,7 @@
 import {FC} from "react";
 import styles from "./Presentation.module.scss";
 import Header from "../../components/Header";
+import classNames from "classnames";
 
 const Presentation = () => {
 	let role = window.localStorage.getItem('role')
@@ -18,6 +19,15 @@ const Presentation = () => {
 
 							<div className={styles.preview}>
 								<img src='../images/slider1.png' alt='paint' />
+							</div>
+
+							<div className={styles.toggle}>
+								<span className={styles.toggleLabel}>.ppt</span>
+								<label className={styles.switch}>
+									<input className={styles.inputToggle} type="checkbox"/>
+									<span className={classNames(styles.slider, styles.round)}></span>
+								</label>	
+								<span className={styles.toggleLabel}>.pdf</span>
 							</div>
 							
 							<div className={styles.buttonContainer}>
@@ -45,6 +55,8 @@ const Presentation = () => {
 										<label className={styles.radioLabel} htmlFor="pdf">.pdf</label>
 									</div>
 								</div>
+
+								
 							</div>
 
 					

@@ -113,7 +113,6 @@ const Generation = () => {
 											
 										</div>
 									</div>
-									
 
 									<div className={styles.buttonContainer}>
 											<button type="submit" onClick={handleSubmit}

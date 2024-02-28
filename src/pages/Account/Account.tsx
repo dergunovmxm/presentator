@@ -4,6 +4,7 @@ import Logo from '../../components/Logo'
 import {prices} from './utils'
 import Loader from '../../components/Loader'
 import { useNavigate } from 'react-router'
+import Header from '../../components/Header'
 
 const Account: FC = () => {
 	const navigate = useNavigate()
@@ -17,9 +18,7 @@ const Account: FC = () => {
 			<div className={styles.opacityBox}>
 				<div className={styles.contentBox}>
 					
-					<div className={styles.accountHeader}>
-						<Logo/>
-					</div>
+					<Header/>
 
 					<div className={styles.content}>
 						<div className={styles.account}>

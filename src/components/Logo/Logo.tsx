@@ -17,8 +17,7 @@ const Logo : FC = () => {
 		<div className={style.logo}
 			onClick={() => navigate(checkRole())}
 		>
-				<span>Презентатор</span>
-				<span className={style.color}>AI</span>
+				<img src="../images/logoAI.svg"/>
 			</div>
 	)
 }

@@ -5,6 +5,7 @@ import { Field, Formik } from 'formik'
 import { Form, Link } from 'react-router-dom'
 import cn from "classnames"
 import { validationSchema } from './utils';
+import Header from '../../../components/Header';
 const Confirm = () => {
 	const navigate = useNavigate()
 	const [checked, setChekecd] = useState(false)
@@ -17,14 +18,8 @@ const Confirm = () => {
 	return(
 		<main className={styles.container}>
 			<div className={styles.opacityBox}>
+					<Header />
 					<div className={styles.content}>
-						<div className={styles.logo}
-							onClick={() => navigate('/viewer/homepage')}
-						>
-							<span>Презентатор</span>
-							<span className={styles.color}>AI</span>
-						</div>
-
 						<Formik
 							validationSchema={validationSchema}
 							initialValues={{

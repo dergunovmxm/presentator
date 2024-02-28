@@ -4,18 +4,15 @@ import { Field, Form, Formik } from 'formik'
 import { useNavigate } from "react-router-dom";
 import { validationSchema } from "./utils";
 import cn from "classnames"
+import Header from "../../../components/Header";
 const Registration: FC = () => {
   const navigate = useNavigate()
   return (
     <main className={styles.container}>
       <div className={styles.opacityBox}>
+      <Header />
         <div className={styles.content}>
-          <div className={styles.logo}
-            onClick={() => navigate('/viewer/homepage')}
-          >
-            <span>Презентатор</span>
-            <span className={styles.color}>AI</span>
-          </div>
+         
           <Formik
             validationSchema={validationSchema}
             initialValues={{

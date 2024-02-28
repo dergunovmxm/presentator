@@ -14,12 +14,12 @@ const Greeting: FC = () => {
 				
 				<div className={styles.titleSection}>
 					<span className={styles.title}>Создавайте идеальные презентации</span>
-					<span className={styles.titleColor}> вместе с ПрезентаторAi</span>
+					<span className={styles.titleColor}> вместе с ПрезентаторAI</span>
 				</div>
 
 				<div className={styles.titleSectionMobile}>
 					<span className={styles.title}>Создавайте идеальные презентации</span>
-					<span className={styles.titleColor}> с помощью Ai</span>
+					<span className={styles.titleColor}> с помощью AI</span>
 				</div>
 
 				<span className={styles.greetHint}>Нужно только зарегистрироваться...</span>
