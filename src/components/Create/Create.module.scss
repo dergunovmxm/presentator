@@ -44,7 +44,9 @@
 	align-items: center;
 	cursor: pointer;
 }
-
+.buttonPrimary:hover {
+	opacity: .8;
+}
 
 @media screen and (max-width: 1024px) {
 	.title {
@@ -53,9 +55,26 @@
 	}
 	.buttonPrimary{ 
 		width: 240px;
+		height: 56px;
+		font-size: 16px;
+	}
+}
+
+
+@media screen and (max-width: 920px) {
+	.container {
+		margin-bottom: 74px;
+	}
+	.title {
+		font-size: 32px;
+		margin-bottom: 24px;
+	}
+	.buttonPrimary{ 
+		width: 230px;
 		height: 70px;
 	}
 }
+
 
 @media screen and (max-width: 430px) {
 	.container {

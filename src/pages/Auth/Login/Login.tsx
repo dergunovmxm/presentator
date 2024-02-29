@@ -5,15 +5,21 @@ import { useNavigate } from "react-router-dom";
 import cn from "classnames"
 import { validationSchema } from './utils';
 import Header from '../../../components/Header';
+import Logo from '../../../components/Logo';
 
 const Login: FC = () => {
 	const navigate = useNavigate()
+	const role = window.localStorage.getItem('role')
 	return(
 		<main className={styles.container}>
 			<div className={styles.opacityBox}>
-			<Header />
-					<div className={styles.content}>
-						
+				<div className={styles.headerContainer}>
+          <Header role={role}/>
+        </div>
+        <div className={styles.content}>
+          <div className={styles.logoContainer}>
+            <Logo/>
+          </div>
 						<Formik 
 							validationSchema={validationSchema}
 							initialValues={{

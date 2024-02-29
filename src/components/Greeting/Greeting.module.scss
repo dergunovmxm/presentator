@@ -75,6 +75,9 @@
 	align-items: center;
 	cursor: pointer;
 }
+.buttonPrimary:hover {
+	opacity: .8;
+}
 
 .greetingButtonLabel{
 	width: 220px;
@@ -151,6 +154,65 @@
 	.buttonPrimary{
 		width: 220px;
 	}
+}
+
+@media screen and (max-width: 920px) {
+	.greet {
+		padding: 0;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+	}
+	.greetContent{
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+	}
+	.imageSection {
+		display: none;
+	}
+	.titleSection {
+		display: none;
+	}
+	.titleSectionMobile {
+		display: initial;
+		width: 720px;
+		text-align: center;
+	}
+	.title {
+		font-size: 48px;
+	}
+	.titleColor {
+		font-size: 48px;
+	}
+	.greetHint {
+		font-size: 18px;
+	}
+	.greetContent {
+		width: 720px;
+	}
+
+	.buttonPrimary{ 
+		width: 235px;
+		height: 55px;
+	}
+	.buttonPrimary {
+		font-size: 16px;
+	}
+
+	.buttonGroup {
+		margin-top: 32px;
+		display: flex;
+		align-items: center;
+	}
+	.greetingButtonLabel{ 
+		a.buttonLink {
+			font-size: 16px;
+		}
+	}
+
 }
 
 @media screen and (max-width: 430px) {

@@ -6,9 +6,11 @@ import { Form, Link } from 'react-router-dom'
 import cn from "classnames"
 import { validationSchema } from './utils';
 import Header from '../../../components/Header';
+import Logo from '../../../components/Logo';
 const Confirm = () => {
 	const navigate = useNavigate()
 	const [checked, setChekecd] = useState(false)
+	const role = window.localStorage.getItem('role')
 	function focusChange(e) {
     if (e.target.value.length >= e.target.getAttribute("maxlength")) {
       e.target.nextElementSibling.focus();
@@ -18,8 +20,13 @@ const Confirm = () => {
 	return(
 		<main className={styles.container}>
 			<div className={styles.opacityBox}>
-					<Header />
+				<div className={styles.headerContainer}>
+					<Header role={role}/>
+				</div>
 					<div className={styles.content}>
+						<div className={styles.logoContainer}>
+							<Logo/>
+						</div>
 						<Formik
 							validationSchema={validationSchema}
 							initialValues={{

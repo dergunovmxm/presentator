@@ -45,18 +45,11 @@ const Footer: FC = () => {
 							<span className={styles.footerInfoTitle}>Продукт</span>
 							<img className={styles.arrow} src={visibleProducts ? '../images/arrow_up.svg' : '../images/arrow_down.svg'	}/>
 						</div>
-						{
-							visibleProducts ? (
-								<>
-									<span className={styles.footerInfoLink}>Сгенерировать презентацию</span>
-									<span className={styles.footerInfoLink}>Купить генерации</span>
-									<span className={styles.footerInfoLink}>Личный кабинет</span>
-								</>
-							) : (
-								<></>
-							)
-						}
-							
+							<div className={visibleProducts ? styles.dropdownVisible : styles.dropdownHidden}>
+								<span className={styles.footerInfoLink}>Сгенерировать презентацию</span>
+								<span className={styles.footerInfoLink}>Купить генерации</span>
+								<span className={styles.footerInfoLink}>Личный кабинет</span>
+							</div>
 					</div>
 
 					<div className={styles.footerInfoItem}>
@@ -64,26 +57,19 @@ const Footer: FC = () => {
 							<span className={styles.footerInfoTitle}>Контакты</span>
 							<img className={styles.arrow} src={visibleContacts ? '../images/arrow_up.svg' : '../images/arrow_down.svg'	}/>
 						</div>
-						{
-							visibleContacts ? (
-								<>
-									<span className={styles.footerInfoLink}>+7 (982)836-76-76</span>
-									<span className={styles.footerInfoLink}>presentai@gmail.com</span>
-													
-						<div className={styles.socialWeb}>
-							{
-								iconsMobile.map((icon) => (
-										<img className={styles.socialWebIcon} src={icon.src} alt='socialWebIcon' />
-								))
-							}
-						</div>
-								</>
-							) : (
-								<></>
-							)
-						}
 						
-	
+						<div className={visibleContacts ? styles.dropdownVisible : styles.dropdownHidden}>
+							<span className={styles.footerInfoLink}>+7 (982)836-76-76</span>
+							<span className={styles.footerInfoLink}>presentai@gmail.com</span>
+											
+							<div className={styles.socialWeb}>
+								{
+									iconsMobile.map((icon) => (
+											<img className={styles.socialWebIcon} src={icon.src} alt='socialWebIcon' />
+									))
+								}
+							</div>
+						</div>
 					</div>
 				</div>
 							

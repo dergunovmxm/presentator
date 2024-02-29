@@ -51,6 +51,29 @@
 
 }
 
+@media screen and (max-width: 920px) {
+	.title {
+		font-size: 24px;
+	}
+	.container {
+		padding: 0 24px;
+	}
+	.guideImage {
+		margin: 32px 0 37px 0;
+	}
+	.guideStatisticsValue {
+		font-size: 32px;
+		margin-bottom: 8px;
+	}
+	.guideStatisticsLabel {
+		font-size: 16px;
+		font-weight: 300;
+	}
+	.guideStatistics{
+		margin-bottom: 56px;
+	}
+}
+
 @media screen and (max-width: 430px) {
 	.container {
 		padding: 0 16px;

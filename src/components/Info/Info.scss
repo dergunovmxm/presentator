@@ -73,7 +73,37 @@
 		}
  }
 
+ @media screen and (max-width: 920px) {
+	.infoContainer {
+		padding: 0 24px;
+	}
+
+	.description{
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 21px;
+		letter-spacing: 0%;
+		padding: 16px;
+	}
+	.infoItem-forward{
+		img {
+			width: 212px;
+			margin: 0;
+		}
+	}
+	
+	.infoItem-reverse{
+		img {
+			width: 212px;
+		}
+	}
+	.descriptionContainer{
+		width: 450px;
+	}
+ }
+
  @media screen and (max-width: 430px) {
+
 	.infoContainer {
 		display: none
 	}

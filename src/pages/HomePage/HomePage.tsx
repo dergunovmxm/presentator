@@ -1,4 +1,4 @@
-import React, {FC, useLayoutEffect} from "react";
+import React, {FC, useLayoutEffect, useRef} from "react";
 import {Outlet} from "react-router-dom";
 import styles from './HomePage.module.scss'
 import Header from "../../components/Header";
@@ -19,7 +19,7 @@ const HomePage: FC = () => {
 			</div>
 			<Guide/>
 			<Examples/>
-			<Info />
+			<Info/>
 			<Slider />
 			<Create/>
 			<Footer/>

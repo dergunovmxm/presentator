@@ -63,6 +63,22 @@
 	}
 }
 
+
+@media screen and (max-width: 920px) {
+	.container {
+		margin: 16px 24px
+	}
+	.scroll {
+		margin: 0 8px;
+		border-radius: 15px;
+	}
+	.sliderImage {
+		width: 416px;
+		height: 298px;
+		padding: 0 8px;
+		border-radius: 20px;
+	}
+}
 @media screen and (max-width: 430px) {
 	.container {
 		margin: 40px 0 32px 0;

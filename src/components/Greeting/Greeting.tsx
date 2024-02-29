@@ -1,12 +1,12 @@
-import React, {FC} from "react";
+import React, {FC, useRef} from "react";
 
 import styles from './Greeting.module.scss'
 import { useNavigate } from "react-router";
-const Greeting: FC = () => {
+interface GreetingProps {}
+const Greeting: FC<GreetingProps> = () => {
 	const isAuth = false
 	let role = localStorage.getItem('role')
 	const navigate = useNavigate();
-	
 	return (
 		<section className={styles.greet}>
 			
@@ -38,7 +38,10 @@ const Greeting: FC = () => {
 					}
 					
 					<div className={styles.greetingButtonLabel}>
-						<a className={styles.buttonLink} href="#more">Узнать больше</a>
+						<a className={styles.buttonLink} onClick={()=> {
+							const element = document.getElementById('info')
+							element?.scrollIntoView({behavior: 'smooth'})
+						}} >Узнать больше</a>
 						<img src='../images/arrow_down.svg' alt='paint' />
 					</div>
 				</div>

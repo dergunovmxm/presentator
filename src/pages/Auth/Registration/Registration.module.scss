@@ -4,7 +4,6 @@
 	src: url('../../../assets/fonts/Benzin/Benzin-Bold.ttf')format('ttf');
 }
 
-
 .container{
 	height: 100vh;
 	width: 100vw;
@@ -14,6 +13,7 @@
 	position: absolute;
 	left: 0;
 	top:0;
+	overflow: hidden;
 }
 
 .opacityBox{
@@ -26,25 +26,9 @@
 	width: 100vw;
 	height: 100vh;
 	display: flex;
-	justify-content: center;
+	justify-content: space-around;
 	align-items: center;
 	flex-direction: row;
-}
-
-
-.logo{
-
-	font-family: 'Benzin';
-	font-size: 56px;
-	font-weight: 400;
-	line-height: 130%;
-	letter-spacing: 0%;
-	.color {
-		color: rgb(91, 136, 229)
-	}
-	margin-right: 80px;
-
-	cursor: pointer;
 }
 
 // form
@@ -146,7 +130,9 @@ button{
 	line-height: 21px;
 	letter-spacing: 0%;
 }
-
+button:hover {
+	opacity: 0.9;
+}
 
 .buttonContainer{
 	display: flex;
@@ -199,12 +185,12 @@ button{
 	margin-bottom: 4px
 }
 
+.headerContainer {
+	display: none;
+}
 //adaptive
 
 @media screen and (max-width: 1024px) {
-	.logo{
-		font-size: 42px;
-	}
 	.form{
 		//size
 		width: 420px;
@@ -217,8 +203,26 @@ button{
 	}
 }
 
+@media screen and (max-width: 920px) { 
+	.logoContainer{
+		display: none;
+	}
+	.headerContainer {
+		display: initial;
+	}
+	.content {
+		display: flex;
+		align-items: start;
+		height: 580px;
+	}
+}
+
 @media screen and (max-width: 430px) {
-	.logo{
+	.opacityBox{
+		display: flex;
+		flex-direction: column;
+	}
+	.logoContainer{
 		display: none;
 	}
 	.content {

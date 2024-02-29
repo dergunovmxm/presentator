@@ -8,6 +8,7 @@ import Header from '../../components/Header'
 
 const Account: FC = () => {
 	const navigate = useNavigate()
+	const role = localStorage.getItem('role')
 	const logout = () => {
 		localStorage.clear()
 		navigate('/viewer/homepage')
@@ -18,7 +19,7 @@ const Account: FC = () => {
 			<div className={styles.opacityBox}>
 				<div className={styles.contentBox}>
 					
-					<Header/>
+					<Header role={role}/>
 
 					<div className={styles.content}>
 						<div className={styles.account}>

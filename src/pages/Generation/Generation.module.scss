@@ -81,10 +81,11 @@
 	padding: 10px;
 	text-decoration: none;
 	outline: none;
+	color: rgba(21, 30, 45, 1);
 }
 	
 .generationInput[placeholder] {
-	color: rgba(21, 30, 45, 0.4);
+	color: rgba(21, 30, 45, 0.8);
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 19px;
@@ -297,6 +298,19 @@ button{
     overflow-x: hidden;
     width: 1440px;
   }
+}
+
+@media screen and (max-width: 920px) {
+	.generation {
+		width: 680px;
+		min-width: 680px;
+	}
+	.form {
+		padding: 64px;
+	}
+	.inputError{
+		background-position: 510px 50%;
+	}
 }
 
 @media screen and (max-width: 430px) {

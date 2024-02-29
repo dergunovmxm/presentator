@@ -30,6 +30,10 @@
 	cursor: pointer;
 }
 
+.menuItem:hover{
+	opacity: 0.7;
+}
+
 .buttonGroup{
 	display: flex;
 	flex-direction: row;
@@ -56,6 +60,10 @@
 	cursor: pointer;
 }
 
+.buttonPrimary:hover {
+	opacity: .8;
+}
+
 .buttonDefault{
 	text-decoration: none;
 	border-radius: 10px;
@@ -71,7 +79,9 @@
 	height: 47px;
 	width: 179px;
 }
-
+.buttonDefault:hover {
+	opacity: 0.9;
+}
 .buttonDefaultBorder{
 	display: flex;
 	justify-content: center;
@@ -135,7 +145,79 @@
 .mobileMenu {
 	display: none;
 }
+@media screen and (max-width: 920px) {
+	.root {
+		padding: 24px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.menu {
+		display: none;
+	}
+	.mobileMenu {
+		display: flex;
 
+		cursor: pointer;
+	}
+	.mobileButtonGroup {
+		cursor: pointer;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+		width: 184px;
+		height: 30px;
+		border-radius: 10px;
+		margin-right: 16px;
+	}
+	.mobileButtonAccountContainer {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 124px;
+		height: 30px;
+		border-radius: 8px;
+		background: linear-gradient(90deg, rgb(0, 83, 255),rgb(91, 136, 229),rgb(82, 0, 255));
+	}
+	.mobileIconContainer {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 22px;
+		height: 22px;
+		border-radius: 6px;
+		background: linear-gradient(90deg, rgb(0, 83, 255),rgb(91, 136, 229),rgb(82, 0, 255));
+		margin-right: 6px;
+	}
+	.mobileIcon{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 4px;
+		background-color: #151E2D;
+		img {
+		width: 20px;
+		height: 20px;
+		}
+	}
+	.mobileButtonAccountText {
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 21px;
+	}
+	.mobileButtonAccount {
+		cursor: pointer;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+		width: 122px;
+		height: 28px;
+		border-radius: 8px;
+		background-color: #151E2D;
+	}
+}
 @media screen and (max-width: 430px) {
 	.root {
 		padding:  11px 16px;
@@ -155,6 +237,7 @@
 	.buttonDefault {
 		width: 120px;
 	}
+
 	.buttonAccountContainer {
 		width: 140px;
 	}

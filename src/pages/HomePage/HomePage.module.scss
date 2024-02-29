@@ -14,3 +14,11 @@
 		max-height: 380px;
 	}
 }
+
+@media screen and (max-width: 920px) {
+	.greetingContainer{
+		height: 100vh;
+		min-height: 450px;
+		max-height: 450px
+	}
+}

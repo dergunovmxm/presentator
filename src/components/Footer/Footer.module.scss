@@ -52,7 +52,7 @@
 	font-weight: 600;
 	line-height: 29px;
 	letter-spacing: 0%;
-	margin: 8px 0 23px 0;
+	margin: 0px 0 23px 0;
 }
 
 .socialWeb{
@@ -64,10 +64,30 @@
 	cursor: pointer;
 	margin-right: 16px;
 }
+.socialWebIcon:hover {
+	opacity: .7;
+}
 
 @media screen and (max-width: 1024px) {
 	.socialWebIcon {
 		width: 28px;
+	}
+}
+
+@media screen and (max-width: 920px) { 
+
+	.footerLogo {
+		display: none;
+	}
+	.footerInfoTitle {
+		font-size: 20px;
+	}
+	.footerInfo {
+		display: flex;
+		justify-content: space-around;
+	}
+	.footerInfoLink{
+		font-size: 14px;
 	}
 }
 
@@ -111,6 +131,21 @@
 	.socialWebIcon {
 		width: 20px;
 		margin-right: 8px;
+	}
+	.dropdownHidden {
+		transform: scaleY(0);
+		transition: transform 0.4s;
+		transform-origin: top;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.dropdownVisible {
+		transform: scaleY(1);
+		transition: transform 0.4s;
+		transform-origin: top;
+		display: flex;
+		flex-direction: column;
 	}
 }
 

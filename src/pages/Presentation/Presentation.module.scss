@@ -224,6 +224,16 @@
   }
 }
 
+@media screen and (max-width: 920px) {
+	.presentation {
+		width: 680px;
+		min-width: 680px;
+		padding: 38px;
+		box-sizing: border-box;
+	}
+
+}
+
 @media screen and (max-width: 430px) {
 	.presentation {
 		width: 343px;

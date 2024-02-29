@@ -1,13 +1,13 @@
-import { FC } from "react";
+import { FC, useRef } from "react";
 import './Info.scss'
 import cn from 'classnames'
 import {infoContent, mobileImages} from "./utils";
 
-const Info: FC = () => {
+interface InfoProps {}
+const Info: FC<InfoProps> = () => {
 	return (
 		<>
-			<section className= 'infoContainer'>
-			<a id='more' />
+			<section id='info' className= 'infoContainer'>
 			{
 				infoContent.map((item) => {
 					return (
@@ -22,7 +22,7 @@ const Info: FC = () => {
 					)
 				})
 			}
-			
+		
 		</section>
 		{/* Разметка для мобильной версии */}
 		<section className= 'infoContainerMobile'>
