@@ -235,9 +235,12 @@
 }
 
 @media screen and (max-width: 430px) {
+	.content {
+			width: 343px;
+	}
 	.presentation {
 		width: 343px;
-		padding: 38px;
+		padding: 38px 0;
 		box-sizing: border-box;
 	}
 	.title {
@@ -328,9 +331,6 @@
   transition: .4s;
 }
 
-.inputToggle:checked + .slider {
-  background-color:  v
-}
 
 .inputToggle:focus + .slider {
   box-shadow: 0 0 1px  rgb(91, 136, 229);;

@@ -23,7 +23,6 @@
 
 .contentBox{
 	padding: 0;
-	overflow-y: hidden;
 }
 
 .content {
@@ -37,13 +36,14 @@
 	border-radius: 20px;
 	width: 720px;
 	min-width: 720px;
-
+	
 }
 
 .form{
 	display: flex;
 	flex-direction: column;
-	padding: 77px 120px 30px 120px
+	padding: 77px 120px 30px 120px;
+
 }
 
 .title {
@@ -76,12 +76,14 @@
 }
 
 .generationInput {
+	width: 100%;
 	border: 2px solid rgb(91, 136, 229);
 	border-radius: 10px;
 	padding: 10px;
 	text-decoration: none;
 	outline: none;
 	color: rgba(21, 30, 45, 1);
+	box-sizing: border-box;
 }
 	
 .generationInput[placeholder] {
@@ -268,6 +270,23 @@ button{
 	}
 }
 
+.titleError{
+	border: 2px solid rgb(255, 51, 31);
+	border-radius: 10px;
+	padding: 10px;
+	text-decoration: none;
+	outline: none;
+
+
+	background-image: url("../../../public/images/error.svg");
+	background-repeat: no-repeat;
+	background-position: 400px 50%;
+	:focus::placeholder {
+		color: transparent;
+	}
+}
+
+
 .labelError{
 	color: rgb(255, 51, 31);
 	font-size: 12px;
@@ -275,6 +294,37 @@ button{
 	line-height: 125%;
 	letter-spacing: 0%;
 	margin-bottom: 4px
+}
+
+.minError {
+	color: rgb(255, 51, 31);
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 125%;
+	letter-spacing: 0%;
+	margin: 8px 0;
+}
+
+.titleContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.removeSlide {
+	margin: 0 0 0 8px ;
+	width: 42px;
+	height: 42px;
+}
+
+.generationTitle {
+	width: 100%;
+	border: 2px solid rgb(91, 136, 229);
+	border-radius: 10px;
+	padding: 10px;
+	text-decoration: none;
+	outline: none;
+	color: rgba(21, 30, 45, 1);
 }
 
 @media screen and (max-width: 1920px) {
@@ -309,7 +359,10 @@ button{
 		padding: 64px;
 	}
 	.inputError{
-		background-position: 510px 50%;
+		background-position: 515px 50%;
+	}
+	.titleError{
+		background-position: 460px 50%;
 	}
 }
 
@@ -363,5 +416,12 @@ button{
 	.generationInput[placeholder] {
 		font-size: 14px;
 	}
-
+	.removeSlide {
+		margin: 0 0 0 8px ;
+		width: 36px;
+		height: 36px;
+	}
+	.minError {
+		font-size: 12px;
+	}
 }

@@ -28,6 +28,14 @@
 	line-height: 24px;
 	font-weight: 400;
 	cursor: pointer;
+	a {
+		text-decoration: none;
+		color: white;
+	}
+	a:focus {
+		text-decoration: none;
+		color: white;
+	}
 }
 
 .menuItem:hover{
@@ -157,7 +165,6 @@
 	}
 	.mobileMenu {
 		display: flex;
-
 		cursor: pointer;
 	}
 	.mobileButtonGroup {

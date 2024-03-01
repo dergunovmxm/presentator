@@ -1,7 +1,7 @@
 import { FC, useState } from "react";
 import styles from "./Generation.module.scss";
 import Header from "../../components/Header";
-import { Field, Formik } from "formik";
+import { ErrorMessage, Field, FieldArray, Formik } from "formik";
 import { Form, useNavigate } from "react-router-dom";
 import Modal from "../../components/Modal";
 import { validationSchema } from "./utils";
@@ -33,9 +33,9 @@ const Generation = () => {
 							validationSchema={validationSchema}
 							initialValues={{
 								theme: "",
-								slides: "",
 								locale: false,
-
+								slides: '',
+								titles: [{title: ''},{title: ''},{title: ''},{title: ''},{title: ''},{title: ''},]
 							}}
 							onSubmit={(values, {resetForm}) => {
 								const data = {
@@ -47,7 +47,7 @@ const Generation = () => {
 								resetForm()
 							}}
 						>
-							{({ errors, touched, handleSubmit }) => (
+							{({ errors, touched, handleSubmit, values }) => (
 								<Form className={styles.form}>
 									<div className={styles.title}>
 										Генератор презентаций
@@ -63,12 +63,56 @@ const Generation = () => {
 										className={cn(styles.generationInput, {[styles.inputError]: errors.theme && touched.theme})} 
 									/>
 
-									<label className={cn(styles.label, {[styles.labelError]: errors.slides && touched.slides})}>Количество слайдов (до 20)</label>
-									<Field
-										name="slides"
-										placeholder="6"
-										className={cn(styles.generationInput, {[styles.inputError]: errors.slides && touched.slides})} 
-									/>
+									{
+										typeGeneration === 'automatic' ? (
+											<>
+													<label className={cn(styles.label, {[styles.labelError]: errors.slides && touched.slides})}>Количество слайдов (до 20)</label>
+											<Field
+												name="slides"
+												placeholder="6"
+												className={cn(styles.generationInput, {[styles.inputError]: errors.slides && touched.slides})} 
+											/>
+											</>
+										) :
+										(
+											<FieldArray name='titles'>
+												{({insert, remove, push}) =>(
+													<>
+														{ values.titles.map((title, index) => (
+															<>
+															<label htmlFor={`titles.${index}.title`} className={cn(styles.label, {[styles.labelError]: errors.titles && touched.titles})}>Название слайда {index + 1}</label>
+															<div className={styles.titleContainer}>
+																<Field
+																	key={index}
+																	name={`titles.${index}.title`} 
+																	type="text"
+																	className={cn(styles.generationInput, {[styles.titleError]: errors.titles && touched.titles})}  
+																/> 
+																<button type="button" className={styles.removeSlide} onClick={() => remove(index)}>x</button>
+															</div>
+															
+													</>
+														))
+															
+														}
+														<p className={cn({[styles.minError]: errors.titles && touched.titles})}>
+															<ErrorMessage errors={errors}  type="min" name="titles" />
+														</p>
+														
+														<div className={styles.buttonContainer}>
+																<button
+																type="button"
+																onClick={() => push({ title: "" })}
+															>
+																Добавить 
+															</button>
+														</div>
+													
+													</>
+												)}
+											</FieldArray>
+										)
+									}
 									<div className={styles.checkboxContainer}>
 										<Field
 											name="locale"

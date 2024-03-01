@@ -21,8 +21,11 @@ const Header: FC<HeaderProps> = ({generation, role}: HeaderProps) => {
 					{
 						!generation && (
 							<>
-								<div className={styles.menuItem}>{content.faq}</div>
-								<div className={styles.menuItem}>{content.support}</div>
+								<div className={styles.menuItem}><a href="https://t.me/presentatorai/2">{content.faq}</a></div>
+								<div className={styles.menuItem}>
+								{content.support}
+									{/* <a href="ai.presentator@gmail.com">{content.support}</a> */}
+								</div>
 							</>
 						)
 					}
